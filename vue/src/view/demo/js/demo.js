@@ -47,8 +47,9 @@ export default {
       let arr = []
       for (var i = 0; i < this.maxList; i++) {
         let obj = {}
-        obj.num1 = this.randomNum(this.minNum,this.maxNum)
-        obj.num2 = this.randomNum(this.minNum,this.maxNum)
+        obj.num1 = this.randomNum(parseInt(this.minNum),parseInt(this.maxNum))
+        obj.num2 = this.randomNum(parseInt(this.minNum),parseInt(this.maxNum))
+
         obj.ysf = this.ysf[this.randomNum(0,3)]
         if(obj.ysf == "1"){
           obj.answer = obj.num1 + obj.num2
@@ -72,6 +73,7 @@ export default {
         
         arr.push(obj)
       }
+      console.log(arr)
       this.list = arr
     }
   }
